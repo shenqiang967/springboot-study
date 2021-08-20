@@ -1,0 +1,7 @@
+2021-08-20 13:59:17  [ main:0 ] - [ INFO ]  Starting DemoApplication using Java 1.8.0_131 on DESKTOP-C8EM5CU with PID 1196 (C:\Users\18055\Desktop\springboot-study\springboot_log4j\target\classes started by 18055 in C:\Users\18055\Desktop\springboot-study\springboot_log4j)
+2021-08-20 13:59:17  [ main:3 ] - [ INFO ]  No active profile set, falling back to default profiles: default
+2021-08-20 13:59:18  [ main:788 ] - [ INFO ]  Tomcat initialized with port(s): 8080 (http)
+2021-08-20 13:59:19  [ main:1915 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 1860 ms
+2021-08-20 13:59:19  [ main:2227 ] - [ INFO ]  Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-20 13:59:19  [ main:2235 ] - [ INFO ]  Started DemoApplication in 2.98 seconds (JVM running for 4.271)
+2021-08-20 13:59:19  [ main:2241 ] - [ INFO ]  启动成功11111111111

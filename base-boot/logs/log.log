@@ -1,0 +1,731 @@
+2021-09-27 10:37:43  [ background-preinit:0 ] - [ INFO ]  HV000001: Hibernate Validator 5.4.3.Final
+2021-09-27 10:37:43  [ main:48 ] - [ INFO ]  Starting BaseBootApplication using Java 1.8.0_131 on DESKTOP-C8EM5CU with PID 2860 (C:\Users\18055\Desktop\springboot-study\base-boot\target\classes started by 18055 in C:\Users\18055\Desktop\springboot-study\base-boot)
+2021-09-27 10:37:43  [ main:49 ] - [ INFO ]  No active profile set, falling back to default profiles: default
+2021-09-27 10:37:45  [ main:1266 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-27 10:37:45  [ main:1267 ] - [ INFO ]  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-27 10:37:45  [ main:1368 ] - [ INFO ]  Finished Spring Data repository scanning in 90 ms. Found 2 JPA repository interfaces.
+2021-09-27 10:37:45  [ main:1389 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-27 10:37:45  [ main:1390 ] - [ INFO ]  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-27 10:37:45  [ main:1412 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.JobDAO. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-27 10:37:45  [ main:1413 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.UserDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-27 10:37:45  [ main:1413 ] - [ INFO ]  Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2021-09-27 10:37:45  [ main:1791 ] - [ INFO ]  Bean 'redisConfiguration' of type [com.sq.base.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$25825b7a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-27 10:37:46  [ main:2241 ] - [ INFO ]  Tomcat initialized with port(s): 8081 (http)
+2021-09-27 10:37:47  [ main:3416 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 3313 ms
+2021-09-27 10:37:47  [ main:3590 ] - [ INFO ]  HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-27 10:37:47  [ main:3741 ] - [ INFO ]  HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-27 10:37:47  [ main:3905 ] - [ INFO ]  HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-27 10:37:47  [ main:4044 ] - [ INFO ]  HikariPool-1 - Starting...
+2021-09-27 10:37:48  [ main:4709 ] - [ INFO ]  HikariPool-1 - Start completed.
+2021-09-27 10:37:48  [ main:4726 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-09-27 10:37:49  [ main:5748 ] - [ INFO ]  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-27 10:37:49  [ main:5761 ] - [ INFO ]  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-27 10:37:49  [ main:5808 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-27 10:37:49  [ main:5811 ] - [ INFO ]  Job execution threads will use class loader of thread: main
+2021-09-27 10:37:49  [ main:5821 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-27 10:37:49  [ main:5821 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-27 10:37:49  [ main:5822 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-27 10:37:49  [ main:5823 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-27 10:37:49  [ main:5823 ] - [ INFO ]  Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2021-09-27 10:37:49  [ main:5824 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-27 10:37:50  [ main:6262 ] - [ WARN ]  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-27 10:37:51  [ main:7223 ] - [ INFO ]  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-09-27 10:37:51  [ main:7680 ] - [ INFO ]  Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@60317de8, org.springframework.security.web.context.SecurityContextPersistenceFilter@11267e87, org.springframework.security.web.header.HeaderWriterFilter@22fe90df, org.springframework.web.filter.CorsFilter@363e2009, org.springframework.security.web.authentication.logout.LogoutFilter@748fa354, com.sq.base.config.security.JwtAuthenticationFilter@7b55fc83, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@389a9ff6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@da5b46f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@43cf97a8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3615f8d9, org.springframework.security.web.session.SessionManagementFilter@2e564c78, org.springframework.security.web.access.ExceptionTranslationFilter@22a1d77b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@669e730d]
+2021-09-27 10:37:51  [ main:7998 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-27 10:37:51  [ main:7999 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-27 10:37:51  [ main:8000 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-27 10:37:51  [ main:8000 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-27 10:37:51  [ main:8000 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-27 10:37:51  [ main:8000 ] - [ INFO ]  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-09-27 10:37:51  [ main:8000 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-27 10:37:51  [ main:8001 ] - [ INFO ]  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@247d44b4
+2021-09-27 10:37:51  [ main:8066 ] - [ INFO ]  Tomcat started on port(s): 8081 (http) with context path ''
+2021-09-27 10:37:51  [ main:8068 ] - [ INFO ]  Context refreshed
+2021-09-27 10:37:51  [ main:8095 ] - [ INFO ]  Found 1 custom documentation plugin(s)
+2021-09-27 10:37:51  [ main:8131 ] - [ INFO ]  Scanning for api listing references
+2021-09-27 10:37:52  [ main:8336 ] - [ INFO ]  Starting Quartz Scheduler now
+2021-09-27 10:37:52  [ main:8337 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-09-27 10:37:52  [ main:8346 ] - [ INFO ]  任务已经启动......
+2021-09-27 10:37:52  [ main:8350 ] - [ INFO ]  Started BaseBootApplication in 8.887 seconds (JVM running for 11.841)
+2021-09-27 10:38:15  [ http-nio-8081-exec-1:31245 ] - [ INFO ]  Initializing Servlet 'dispatcherServlet'
+2021-09-27 10:38:15  [ http-nio-8081-exec-1:31246 ] - [ INFO ]  Completed initialization in 1 ms
+2021-09-27 10:38:15  [ http-nio-8081-exec-1:32176 ] - [ ERROR ]  用户访问资源没有携带正确的token
+2021-09-27 10:38:16  [ http-nio-8081-exec-1:32272 ] - [ INFO ]  请求ip：0:0:0:0:0:0:0:1
+2021-09-27 10:38:16  [ http-nio-8081-exec-1:32272 ] - [ INFO ]  请求的方法：GET
+2021-09-27 10:39:22  [ http-nio-8081-exec-5:98628 ] - [ ERROR ]  用户访问资源没有携带正确的token
+2021-09-27 10:40:14  [ http-nio-8081-exec-9:151017 ] - [ INFO ]  AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=7FF404E65CC3597AB92C6823D0E53847], Granted Authorities=[ROLE_ANONYMOUS]]
+2021-09-27 10:40:15  [ http-nio-8081-exec-9:151354 ] - [ INFO ]  请求ip：0:0:0:0:0:0:0:1
+2021-09-27 10:40:15  [ http-nio-8081-exec-9:151355 ] - [ INFO ]  请求的方法：GET
+2021-09-27 10:40:43  [ http-nio-8081-exec-10:180196 ] - [ ERROR ]  用户访问资源没有携带正确的token
+2021-09-27 10:40:43  [ http-nio-8081-exec-10:180199 ] - [ INFO ]  请求ip：0:0:0:0:0:0:0:1
+2021-09-27 10:40:43  [ http-nio-8081-exec-10:180200 ] - [ INFO ]  请求的方法：GET
+2021-09-27 10:40:52  [ http-nio-8081-exec-1:188960 ] - [ ERROR ]  用户访问资源没有携带正确的token
+2021-09-27 10:40:52  [ http-nio-8081-exec-1:188962 ] - [ INFO ]  请求ip：0:0:0:0:0:0:0:1
+2021-09-27 10:40:52  [ http-nio-8081-exec-1:188962 ] - [ INFO ]  请求的方法：GET
+2021-09-27 10:41:21  [ http-nio-8081-exec-4:217570 ] - [ ERROR ]  用户访问资源没有携带正确的token
+2021-09-27 10:41:56  [ http-nio-8081-exec-4:252674 ] - [ INFO ]  请求ip：0:0:0:0:0:0:0:1
+2021-09-27 10:41:56  [ http-nio-8081-exec-4:252675 ] - [ INFO ]  请求的方法：GET
+2021-09-27 10:43:04  [ http-nio-8081-exec-7:320829 ] - [ INFO ]  AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=7FF404E65CC3597AB92C6823D0E53847], Granted Authorities=[ROLE_ANONYMOUS]]
+2021-09-27 10:43:04  [ http-nio-8081-exec-7:320831 ] - [ INFO ]  请求ip：0:0:0:0:0:0:0:1
+2021-09-27 10:43:04  [ http-nio-8081-exec-7:320831 ] - [ INFO ]  请求的方法：GET
+2021-09-27 10:43:17  [ http-nio-8081-exec-8:333659 ] - [ ERROR ]  用户访问资源没有携带正确的token
+2021-09-27 10:43:17  [ http-nio-8081-exec-8:333661 ] - [ INFO ]  请求ip：0:0:0:0:0:0:0:1
+2021-09-27 10:43:17  [ http-nio-8081-exec-8:333661 ] - [ INFO ]  请求的方法：GET
+2021-09-27 10:43:18  [ http-nio-8081-exec-10:334984 ] - [ ERROR ]  用户访问资源没有携带正确的token
+2021-09-27 10:43:18  [ http-nio-8081-exec-10:334987 ] - [ INFO ]  请求ip：0:0:0:0:0:0:0:1
+2021-09-27 10:43:18  [ http-nio-8081-exec-10:334987 ] - [ INFO ]  请求的方法：GET
+2021-09-27 10:43:19  [ http-nio-8081-exec-1:335679 ] - [ ERROR ]  用户访问资源没有携带正确的token
+2021-09-27 10:43:19  [ http-nio-8081-exec-1:335681 ] - [ INFO ]  请求ip：0:0:0:0:0:0:0:1
+2021-09-27 10:43:19  [ http-nio-8081-exec-1:335682 ] - [ INFO ]  请求的方法：GET
+2021-09-27 10:43:40  [ http-nio-8081-exec-4:356721 ] - [ ERROR ]  用户访问资源没有携带正确的token
+2021-09-27 10:43:40  [ http-nio-8081-exec-4:356723 ] - [ INFO ]  请求ip：0:0:0:0:0:0:0:1
+2021-09-27 10:43:40  [ http-nio-8081-exec-4:356723 ] - [ INFO ]  请求的方法：GET
+2021-09-27 10:44:12  [ HikariPool-1 housekeeper:389049 ] - [ WARN ]  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s373ms521µs500ns).
+2021-09-27 10:44:27  [ http-nio-8081-exec-6:403810 ] - [ ERROR ]  用户访问资源没有携带正确的token
+2021-09-27 10:44:27  [ http-nio-8081-exec-6:403812 ] - [ INFO ]  请求ip：0:0:0:0:0:0:0:1
+2021-09-27 10:44:27  [ http-nio-8081-exec-6:403812 ] - [ INFO ]  请求的方法：GET
+2021-09-27 10:44:45  [ http-nio-8081-exec-9:422197 ] - [ INFO ]  AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=7FF404E65CC3597AB92C6823D0E53847], Granted Authorities=[ROLE_ANONYMOUS]]
+2021-09-27 10:44:45  [ http-nio-8081-exec-9:422199 ] - [ INFO ]  请求ip：0:0:0:0:0:0:0:1
+2021-09-27 10:44:45  [ http-nio-8081-exec-9:422199 ] - [ INFO ]  请求的方法：GET
+2021-09-27 10:47:03  [ http-nio-8081-exec-3:559223 ] - [ INFO ]  AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=7FF404E65CC3597AB92C6823D0E53847], Granted Authorities=[ROLE_ANONYMOUS]]
+2021-09-27 10:47:03  [ http-nio-8081-exec-3:559225 ] - [ INFO ]  请求ip：0:0:0:0:0:0:0:1
+2021-09-27 10:47:03  [ http-nio-8081-exec-3:559225 ] - [ INFO ]  请求的方法：GET
+2021-09-27 10:49:23  [ SpringApplicationShutdownHook:699267 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 10:49:23  [ SpringApplicationShutdownHook:699497 ] - [ INFO ]  Shutting down Quartz Scheduler
+2021-09-27 10:49:23  [ SpringApplicationShutdownHook:699497 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-27 10:49:23  [ SpringApplicationShutdownHook:699497 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 10:49:23  [ SpringApplicationShutdownHook:699498 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-27 10:49:23  [ SpringApplicationShutdownHook:699546 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-27 10:49:23  [ SpringApplicationShutdownHook:699547 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 10:49:23  [ SpringApplicationShutdownHook:699547 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-27 10:49:23  [ SpringApplicationShutdownHook:699548 ] - [ INFO ]  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-09-27 10:49:23  [ SpringApplicationShutdownHook:699555 ] - [ INFO ]  HikariPool-1 - Shutdown initiated...
+2021-09-27 10:49:23  [ SpringApplicationShutdownHook:699595 ] - [ INFO ]  HikariPool-1 - Shutdown completed.
+2021-09-27 10:49:31  [ background-preinit:0 ] - [ INFO ]  HV000001: Hibernate Validator 5.4.3.Final
+2021-09-27 10:49:31  [ main:64 ] - [ INFO ]  Starting BaseBootApplication using Java 1.8.0_131 on DESKTOP-C8EM5CU with PID 12096 (C:\Users\18055\Desktop\springboot-study\base-boot\target\classes started by 18055 in C:\Users\18055\Desktop\springboot-study\base-boot)
+2021-09-27 10:49:31  [ main:65 ] - [ INFO ]  No active profile set, falling back to default profiles: default
+2021-09-27 10:49:32  [ main:1580 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-27 10:49:32  [ main:1581 ] - [ INFO ]  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-27 10:49:33  [ main:1697 ] - [ INFO ]  Finished Spring Data repository scanning in 102 ms. Found 2 JPA repository interfaces.
+2021-09-27 10:49:33  [ main:1719 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-27 10:49:33  [ main:1721 ] - [ INFO ]  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-27 10:49:33  [ main:1747 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.JobDAO. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-27 10:49:33  [ main:1747 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.UserDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-27 10:49:33  [ main:1748 ] - [ INFO ]  Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2021-09-27 10:49:33  [ main:2222 ] - [ INFO ]  Bean 'redisConfiguration' of type [com.sq.base.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$7e6b5936] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-27 10:49:34  [ main:2696 ] - [ INFO ]  Tomcat initialized with port(s): 8081 (http)
+2021-09-27 10:49:35  [ main:3909 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 3770 ms
+2021-09-27 10:49:35  [ main:4097 ] - [ INFO ]  HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-27 10:49:35  [ main:4267 ] - [ INFO ]  HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-27 10:49:35  [ main:4473 ] - [ INFO ]  HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-27 10:49:36  [ main:4679 ] - [ INFO ]  HikariPool-1 - Starting...
+2021-09-27 10:49:36  [ main:5234 ] - [ INFO ]  HikariPool-1 - Start completed.
+2021-09-27 10:49:36  [ main:5248 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-09-27 10:49:37  [ main:6167 ] - [ INFO ]  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-27 10:49:37  [ main:6177 ] - [ INFO ]  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-27 10:49:37  [ main:6221 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-27 10:49:37  [ main:6223 ] - [ INFO ]  Job execution threads will use class loader of thread: main
+2021-09-27 10:49:37  [ main:6233 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-27 10:49:37  [ main:6233 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-27 10:49:37  [ main:6234 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-27 10:49:37  [ main:6235 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-27 10:49:37  [ main:6235 ] - [ INFO ]  Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2021-09-27 10:49:37  [ main:6235 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-27 10:49:38  [ main:6638 ] - [ WARN ]  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-27 10:49:38  [ main:7364 ] - [ INFO ]  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-09-27 10:49:39  [ main:7794 ] - [ INFO ]  Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4cddc3d9, org.springframework.security.web.context.SecurityContextPersistenceFilter@397bd46b, org.springframework.security.web.header.HeaderWriterFilter@aca2a0b, org.springframework.web.filter.CorsFilter@3d2b8e, org.springframework.security.web.authentication.logout.LogoutFilter@2d4f1ddd, com.sq.base.config.security.JwtAuthenticationFilter@3dcf6026, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2c485b3a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@76ebd595, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@fd5c7f6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@930911e, org.springframework.security.web.session.SessionManagementFilter@2cdb53d6, org.springframework.security.web.access.ExceptionTranslationFilter@7945986a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@690c3b1f]
+2021-09-27 10:49:39  [ main:8082 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-27 10:49:39  [ main:8083 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-27 10:49:39  [ main:8083 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-27 10:49:39  [ main:8083 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-27 10:49:39  [ main:8084 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-27 10:49:39  [ main:8084 ] - [ INFO ]  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-09-27 10:49:39  [ main:8084 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-27 10:49:39  [ main:8084 ] - [ INFO ]  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@1a23136f
+2021-09-27 10:49:39  [ main:8141 ] - [ INFO ]  Tomcat started on port(s): 8081 (http) with context path ''
+2021-09-27 10:49:39  [ main:8142 ] - [ INFO ]  Context refreshed
+2021-09-27 10:49:39  [ main:8173 ] - [ INFO ]  Found 1 custom documentation plugin(s)
+2021-09-27 10:49:39  [ main:8204 ] - [ INFO ]  Scanning for api listing references
+2021-09-27 10:49:39  [ main:8393 ] - [ INFO ]  Starting Quartz Scheduler now
+2021-09-27 10:49:39  [ main:8394 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-09-27 10:49:39  [ main:8400 ] - [ INFO ]  任务已经启动......
+2021-09-27 10:49:39  [ main:8404 ] - [ INFO ]  Started BaseBootApplication in 9.272 seconds (JVM running for 11.056)
+2021-09-27 10:49:47  [ http-nio-8081-exec-2:15776 ] - [ INFO ]  Initializing Servlet 'dispatcherServlet'
+2021-09-27 10:49:47  [ http-nio-8081-exec-2:15777 ] - [ INFO ]  Completed initialization in 1 ms
+2021-09-27 10:49:47  [ http-nio-8081-exec-3:16384 ] - [ INFO ]  AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=F12B47BCA3A758033130AC68A4D06BE3], Granted Authorities=[ROLE_ANONYMOUS]]
+2021-09-27 10:49:48  [ http-nio-8081-exec-3:16808 ] - [ INFO ]  请求ip：0:0:0:0:0:0:0:1
+2021-09-27 10:49:48  [ http-nio-8081-exec-3:16808 ] - [ INFO ]  请求的方法：GET
+2021-09-27 10:50:29  [ SpringApplicationShutdownHook:58305 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 10:50:29  [ SpringApplicationShutdownHook:58477 ] - [ INFO ]  Shutting down Quartz Scheduler
+2021-09-27 10:50:29  [ SpringApplicationShutdownHook:58478 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-27 10:50:29  [ SpringApplicationShutdownHook:58478 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 10:50:29  [ SpringApplicationShutdownHook:58478 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-27 10:50:29  [ SpringApplicationShutdownHook:58497 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-27 10:50:29  [ SpringApplicationShutdownHook:58497 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 10:50:29  [ SpringApplicationShutdownHook:58498 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-27 10:50:29  [ SpringApplicationShutdownHook:58498 ] - [ INFO ]  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-09-27 10:50:29  [ SpringApplicationShutdownHook:58500 ] - [ INFO ]  HikariPool-1 - Shutdown initiated...
+2021-09-27 10:50:29  [ SpringApplicationShutdownHook:58508 ] - [ INFO ]  HikariPool-1 - Shutdown completed.
+2021-09-27 10:50:35  [ background-preinit:1 ] - [ INFO ]  HV000001: Hibernate Validator 5.4.3.Final
+2021-09-27 10:50:35  [ main:59 ] - [ INFO ]  Starting BaseBootApplication using Java 1.8.0_131 on DESKTOP-C8EM5CU with PID 15200 (C:\Users\18055\Desktop\springboot-study\base-boot\target\classes started by 18055 in C:\Users\18055\Desktop\springboot-study\base-boot)
+2021-09-27 10:50:35  [ main:61 ] - [ INFO ]  No active profile set, falling back to default profiles: default
+2021-09-27 10:50:37  [ main:1541 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-27 10:50:37  [ main:1542 ] - [ INFO ]  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-27 10:50:37  [ main:1637 ] - [ INFO ]  Finished Spring Data repository scanning in 84 ms. Found 2 JPA repository interfaces.
+2021-09-27 10:50:37  [ main:1655 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-27 10:50:37  [ main:1656 ] - [ INFO ]  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-27 10:50:37  [ main:1680 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.JobDAO. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-27 10:50:37  [ main:1681 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.UserDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-27 10:50:37  [ main:1681 ] - [ INFO ]  Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2021-09-27 10:50:37  [ main:2080 ] - [ INFO ]  Bean 'redisConfiguration' of type [com.sq.base.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$753d55b6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-27 10:50:38  [ main:2359 ] - [ INFO ]  Tomcat initialized with port(s): 8081 (http)
+2021-09-27 10:50:39  [ main:3542 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 3417 ms
+2021-09-27 10:50:39  [ main:3729 ] - [ INFO ]  HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-27 10:50:39  [ main:3877 ] - [ INFO ]  HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-27 10:50:39  [ main:4017 ] - [ INFO ]  HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-27 10:50:39  [ main:4134 ] - [ INFO ]  HikariPool-1 - Starting...
+2021-09-27 10:50:40  [ main:4561 ] - [ INFO ]  HikariPool-1 - Start completed.
+2021-09-27 10:50:40  [ main:4572 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-09-27 10:50:41  [ main:5358 ] - [ INFO ]  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-27 10:50:41  [ main:5370 ] - [ INFO ]  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-27 10:50:41  [ main:5413 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-27 10:50:41  [ main:5415 ] - [ INFO ]  Job execution threads will use class loader of thread: main
+2021-09-27 10:50:41  [ main:5425 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-27 10:50:41  [ main:5425 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-27 10:50:41  [ main:5427 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-27 10:50:41  [ main:5428 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-27 10:50:41  [ main:5428 ] - [ INFO ]  Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2021-09-27 10:50:41  [ main:5428 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-27 10:50:41  [ main:5802 ] - [ WARN ]  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-27 10:50:42  [ main:6530 ] - [ INFO ]  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-09-27 10:50:42  [ main:6860 ] - [ INFO ]  Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f4b8027, org.springframework.security.web.context.SecurityContextPersistenceFilter@3fc2a1d1, org.springframework.security.web.header.HeaderWriterFilter@470ad01c, org.springframework.web.filter.CorsFilter@501b15b9, org.springframework.security.web.authentication.logout.LogoutFilter@9771c71, com.sq.base.config.security.JwtAuthenticationFilter@769b1d1c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@d164938, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7528089c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a225014, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c5e7696, org.springframework.security.web.session.SessionManagementFilter@41092c8, org.springframework.security.web.access.ExceptionTranslationFilter@7d12fb85, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@72ad577b]
+2021-09-27 10:50:42  [ main:7127 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-27 10:50:42  [ main:7128 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-27 10:50:42  [ main:7129 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-27 10:50:42  [ main:7129 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-27 10:50:42  [ main:7129 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-27 10:50:42  [ main:7129 ] - [ INFO ]  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-09-27 10:50:42  [ main:7129 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-27 10:50:42  [ main:7130 ] - [ INFO ]  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@755fdfad
+2021-09-27 10:50:43  [ main:7175 ] - [ INFO ]  Tomcat started on port(s): 8081 (http) with context path ''
+2021-09-27 10:50:43  [ main:7176 ] - [ INFO ]  Context refreshed
+2021-09-27 10:50:43  [ main:7197 ] - [ INFO ]  Found 1 custom documentation plugin(s)
+2021-09-27 10:50:43  [ main:7229 ] - [ INFO ]  Scanning for api listing references
+2021-09-27 10:50:43  [ main:7422 ] - [ INFO ]  Starting Quartz Scheduler now
+2021-09-27 10:50:43  [ main:7422 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-09-27 10:50:43  [ main:7427 ] - [ INFO ]  任务已经启动......
+2021-09-27 10:50:43  [ main:7430 ] - [ INFO ]  Started BaseBootApplication in 8.149 seconds (JVM running for 9.415)
+2021-09-27 10:51:28  [ http-nio-8081-exec-2:52777 ] - [ INFO ]  Initializing Servlet 'dispatcherServlet'
+2021-09-27 10:51:28  [ http-nio-8081-exec-2:52779 ] - [ INFO ]  Completed initialization in 1 ms
+2021-09-27 10:51:29  [ http-nio-8081-exec-3:53405 ] - [ INFO ]  AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=CAC4B1A3B0EAD33B64A749151977A0FF], Granted Authorities=[ROLE_ANONYMOUS]]
+2021-09-27 10:51:29  [ http-nio-8081-exec-3:53799 ] - [ INFO ]  请求ip：0:0:0:0:0:0:0:1
+2021-09-27 10:51:29  [ http-nio-8081-exec-3:53800 ] - [ INFO ]  请求的方法：GET
+2021-09-27 10:52:24  [ http-nio-8081-exec-5:108972 ] - [ INFO ]  AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=CAC4B1A3B0EAD33B64A749151977A0FF], Granted Authorities=[ROLE_ANONYMOUS]]
+2021-09-27 10:52:34  [ http-nio-8081-exec-5:119122 ] - [ INFO ]  请求ip：0:0:0:0:0:0:0:1
+2021-09-27 10:52:34  [ http-nio-8081-exec-5:119122 ] - [ INFO ]  请求的方法：GET
+2021-09-27 10:57:50  [ SpringApplicationShutdownHook:434478 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 10:57:50  [ SpringApplicationShutdownHook:434645 ] - [ INFO ]  Shutting down Quartz Scheduler
+2021-09-27 10:57:50  [ SpringApplicationShutdownHook:434646 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-27 10:57:50  [ SpringApplicationShutdownHook:434646 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 10:57:50  [ SpringApplicationShutdownHook:434646 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-27 10:57:50  [ SpringApplicationShutdownHook:434667 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-27 10:57:50  [ SpringApplicationShutdownHook:434668 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 10:57:50  [ SpringApplicationShutdownHook:434668 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-27 10:57:50  [ SpringApplicationShutdownHook:434669 ] - [ INFO ]  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-09-27 10:57:50  [ SpringApplicationShutdownHook:434672 ] - [ INFO ]  HikariPool-1 - Shutdown initiated...
+2021-09-27 10:57:50  [ SpringApplicationShutdownHook:434681 ] - [ INFO ]  HikariPool-1 - Shutdown completed.
+2021-09-27 10:57:57  [ background-preinit:0 ] - [ INFO ]  HV000001: Hibernate Validator 5.4.3.Final
+2021-09-27 10:57:57  [ main:52 ] - [ INFO ]  Starting BaseBootApplication using Java 1.8.0_131 on DESKTOP-C8EM5CU with PID 23088 (C:\Users\18055\Desktop\springboot-study\base-boot\target\classes started by 18055 in C:\Users\18055\Desktop\springboot-study\base-boot)
+2021-09-27 10:57:57  [ main:53 ] - [ INFO ]  No active profile set, falling back to default profiles: default
+2021-09-27 10:57:58  [ main:1482 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-27 10:57:58  [ main:1482 ] - [ INFO ]  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-27 10:57:58  [ main:1601 ] - [ INFO ]  Finished Spring Data repository scanning in 108 ms. Found 2 JPA repository interfaces.
+2021-09-27 10:57:58  [ main:1627 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-27 10:57:58  [ main:1629 ] - [ INFO ]  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-27 10:57:58  [ main:1660 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.JobDAO. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-27 10:57:58  [ main:1661 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.UserDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-27 10:57:58  [ main:1662 ] - [ INFO ]  Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2021-09-27 10:57:59  [ main:2062 ] - [ INFO ]  Bean 'redisConfiguration' of type [com.sq.base.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$d03fb8a1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-27 10:57:59  [ main:2327 ] - [ INFO ]  Tomcat initialized with port(s): 8081 (http)
+2021-09-27 10:58:00  [ main:3519 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 3397 ms
+2021-09-27 10:58:00  [ main:3709 ] - [ INFO ]  HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-27 10:58:00  [ main:3866 ] - [ INFO ]  HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-27 10:58:01  [ main:4001 ] - [ INFO ]  HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-27 10:58:01  [ main:4110 ] - [ INFO ]  HikariPool-1 - Starting...
+2021-09-27 10:58:01  [ main:4528 ] - [ INFO ]  HikariPool-1 - Start completed.
+2021-09-27 10:58:01  [ main:4539 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-09-27 10:58:02  [ main:5304 ] - [ INFO ]  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-27 10:58:02  [ main:5314 ] - [ INFO ]  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-27 10:58:02  [ main:5357 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-27 10:58:02  [ main:5360 ] - [ INFO ]  Job execution threads will use class loader of thread: main
+2021-09-27 10:58:02  [ main:5371 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-27 10:58:02  [ main:5371 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-27 10:58:02  [ main:5372 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-27 10:58:02  [ main:5373 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-27 10:58:02  [ main:5373 ] - [ INFO ]  Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2021-09-27 10:58:02  [ main:5373 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-27 10:58:02  [ main:5742 ] - [ WARN ]  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-27 10:58:03  [ main:6429 ] - [ INFO ]  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-09-27 10:58:03  [ main:6852 ] - [ INFO ]  Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@29ddaa8e, org.springframework.security.web.context.SecurityContextPersistenceFilter@1f847d9e, org.springframework.security.web.header.HeaderWriterFilter@41dc34c8, org.springframework.web.filter.CorsFilter@4c678a1f, org.springframework.security.web.authentication.logout.LogoutFilter@63c163e1, com.sq.base.config.security.JwtAuthenticationFilter@217009bd, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@68ea1eb5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6265a548, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3d195d15, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6046fba0, org.springframework.security.web.session.SessionManagementFilter@4e322108, org.springframework.security.web.access.ExceptionTranslationFilter@391b03b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1c15a6aa]
+2021-09-27 10:58:04  [ main:7096 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-27 10:58:04  [ main:7097 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-27 10:58:04  [ main:7098 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-27 10:58:04  [ main:7098 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-27 10:58:04  [ main:7098 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-27 10:58:04  [ main:7098 ] - [ INFO ]  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-09-27 10:58:04  [ main:7098 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-27 10:58:04  [ main:7098 ] - [ INFO ]  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@6fd07a56
+2021-09-27 10:58:04  [ main:7146 ] - [ INFO ]  Tomcat started on port(s): 8081 (http) with context path ''
+2021-09-27 10:58:04  [ main:7147 ] - [ INFO ]  Context refreshed
+2021-09-27 10:58:04  [ main:7167 ] - [ INFO ]  Found 1 custom documentation plugin(s)
+2021-09-27 10:58:04  [ main:7195 ] - [ INFO ]  Scanning for api listing references
+2021-09-27 10:58:04  [ main:7371 ] - [ INFO ]  Starting Quartz Scheduler now
+2021-09-27 10:58:04  [ main:7371 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-09-27 10:58:04  [ main:7379 ] - [ INFO ]  任务已经启动......
+2021-09-27 10:58:04  [ main:7384 ] - [ INFO ]  Started BaseBootApplication in 8.133 seconds (JVM running for 9.515)
+2021-09-27 10:58:10  [ http-nio-8081-exec-2:13460 ] - [ INFO ]  Initializing Servlet 'dispatcherServlet'
+2021-09-27 10:58:10  [ http-nio-8081-exec-2:13464 ] - [ INFO ]  Completed initialization in 3 ms
+2021-09-27 11:13:11  [ SpringApplicationShutdownHook:914314 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 11:13:11  [ SpringApplicationShutdownHook:914489 ] - [ INFO ]  Shutting down Quartz Scheduler
+2021-09-27 11:13:11  [ SpringApplicationShutdownHook:914490 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-27 11:13:11  [ SpringApplicationShutdownHook:914490 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 11:13:11  [ SpringApplicationShutdownHook:914491 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-27 11:13:11  [ SpringApplicationShutdownHook:914513 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-27 11:13:11  [ SpringApplicationShutdownHook:914514 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 11:13:11  [ SpringApplicationShutdownHook:914514 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-27 11:13:11  [ SpringApplicationShutdownHook:914515 ] - [ INFO ]  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-09-27 11:13:11  [ SpringApplicationShutdownHook:914518 ] - [ INFO ]  HikariPool-1 - Shutdown initiated...
+2021-09-27 11:13:11  [ SpringApplicationShutdownHook:914529 ] - [ INFO ]  HikariPool-1 - Shutdown completed.
+2021-09-27 11:13:15  [ background-preinit:0 ] - [ INFO ]  HV000001: Hibernate Validator 5.4.3.Final
+2021-09-27 11:13:15  [ main:60 ] - [ INFO ]  Starting BaseBootApplication using Java 1.8.0_131 on DESKTOP-C8EM5CU with PID 22996 (C:\Users\18055\Desktop\springboot-study\base-boot\target\classes started by 18055 in C:\Users\18055\Desktop\springboot-study\base-boot)
+2021-09-27 11:13:15  [ main:61 ] - [ INFO ]  No active profile set, falling back to default profiles: default
+2021-09-27 11:13:17  [ main:1295 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-27 11:13:17  [ main:1296 ] - [ INFO ]  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-27 11:13:17  [ main:1386 ] - [ INFO ]  Finished Spring Data repository scanning in 80 ms. Found 2 JPA repository interfaces.
+2021-09-27 11:13:17  [ main:1404 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-27 11:13:17  [ main:1406 ] - [ INFO ]  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-27 11:13:17  [ main:1429 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.JobDAO. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-27 11:13:17  [ main:1429 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.UserDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-27 11:13:17  [ main:1430 ] - [ INFO ]  Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2021-09-27 11:13:17  [ main:1790 ] - [ INFO ]  Bean 'redisConfiguration' of type [com.sq.base.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$872c81bb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-27 11:13:17  [ main:2057 ] - [ INFO ]  Tomcat initialized with port(s): 8081 (http)
+2021-09-27 11:13:18  [ main:3238 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 3118 ms
+2021-09-27 11:13:19  [ main:3417 ] - [ INFO ]  HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-27 11:13:19  [ main:3577 ] - [ INFO ]  HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-27 11:13:19  [ main:3712 ] - [ INFO ]  HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-27 11:13:19  [ main:3821 ] - [ INFO ]  HikariPool-1 - Starting...
+2021-09-27 11:13:19  [ main:4228 ] - [ INFO ]  HikariPool-1 - Start completed.
+2021-09-27 11:13:20  [ main:4241 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-09-27 11:13:20  [ main:5007 ] - [ INFO ]  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-27 11:13:20  [ main:5017 ] - [ INFO ]  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-27 11:13:20  [ main:5062 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-27 11:13:20  [ main:5064 ] - [ INFO ]  Job execution threads will use class loader of thread: main
+2021-09-27 11:13:20  [ main:5074 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-27 11:13:20  [ main:5075 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-27 11:13:20  [ main:5076 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-27 11:13:20  [ main:5077 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-27 11:13:20  [ main:5077 ] - [ INFO ]  Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2021-09-27 11:13:20  [ main:5078 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-27 11:13:21  [ main:5460 ] - [ WARN ]  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-27 11:13:21  [ main:6166 ] - [ INFO ]  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-09-27 11:13:22  [ main:6573 ] - [ INFO ]  Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@28effa3f, org.springframework.security.web.context.SecurityContextPersistenceFilter@429dde4d, org.springframework.security.web.header.HeaderWriterFilter@2165d4ab, org.springframework.web.filter.CorsFilter@1d1da00b, org.springframework.security.web.authentication.logout.LogoutFilter@66cb9a63, com.sq.base.config.security.JwtAuthenticationFilter@2db4a84a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@53086bdc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ef48b08, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@64745270, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5cef5fc9, org.springframework.security.web.session.SessionManagementFilter@6a8ab98f, org.springframework.security.web.access.ExceptionTranslationFilter@65fe1f47, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@255482cb]
+2021-09-27 11:13:22  [ main:6877 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-27 11:13:22  [ main:6878 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-27 11:13:22  [ main:6879 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-27 11:13:22  [ main:6879 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-27 11:13:22  [ main:6879 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-27 11:13:22  [ main:6879 ] - [ INFO ]  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-09-27 11:13:22  [ main:6879 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-27 11:13:22  [ main:6879 ] - [ INFO ]  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3bede349
+2021-09-27 11:13:22  [ main:6936 ] - [ INFO ]  Tomcat started on port(s): 8081 (http) with context path ''
+2021-09-27 11:13:22  [ main:6938 ] - [ INFO ]  Context refreshed
+2021-09-27 11:13:22  [ main:6960 ] - [ INFO ]  Found 1 custom documentation plugin(s)
+2021-09-27 11:13:22  [ main:6989 ] - [ INFO ]  Scanning for api listing references
+2021-09-27 11:13:22  [ main:7171 ] - [ INFO ]  Starting Quartz Scheduler now
+2021-09-27 11:13:22  [ main:7172 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-09-27 11:13:22  [ main:7178 ] - [ INFO ]  任务已经启动......
+2021-09-27 11:13:22  [ main:7182 ] - [ INFO ]  Started BaseBootApplication in 7.99 seconds (JVM running for 9.233)
+2021-09-27 11:14:14  [ http-nio-8081-exec-1:58523 ] - [ INFO ]  Initializing Servlet 'dispatcherServlet'
+2021-09-27 11:14:14  [ http-nio-8081-exec-1:58525 ] - [ INFO ]  Completed initialization in 2 ms
+2021-09-27 11:14:15  [ http-nio-8081-exec-1:59712 ] - [ ERROR ]  An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: Cannot pass a null GrantedAuthority collection
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:133)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:85)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:222)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at com.sq.base.config.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:39)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalArgumentException: Cannot pass a null GrantedAuthority collection
+	at org.springframework.util.Assert.notNull(Assert.java:201)
+	at org.springframework.security.core.userdetails.User.sortAuthorities(User.java:162)
+	at org.springframework.security.core.userdetails.User.<init>(User.java:118)
+	at org.springframework.security.core.userdetails.User$UserBuilder.build(User.java:504)
+	at com.sq.base.config.security.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:36)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:93)
+	... 60 more
+2021-09-27 11:15:40  [ SpringApplicationShutdownHook:144959 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 11:15:40  [ SpringApplicationShutdownHook:145146 ] - [ INFO ]  Shutting down Quartz Scheduler
+2021-09-27 11:15:40  [ SpringApplicationShutdownHook:145146 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-27 11:15:40  [ SpringApplicationShutdownHook:145147 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 11:15:40  [ SpringApplicationShutdownHook:145147 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-27 11:15:41  [ SpringApplicationShutdownHook:145513 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-27 11:15:41  [ SpringApplicationShutdownHook:145513 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 11:15:41  [ SpringApplicationShutdownHook:145513 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-27 11:15:41  [ SpringApplicationShutdownHook:145513 ] - [ INFO ]  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-09-27 11:15:41  [ SpringApplicationShutdownHook:145516 ] - [ INFO ]  HikariPool-1 - Shutdown initiated...
+2021-09-27 11:15:41  [ SpringApplicationShutdownHook:145524 ] - [ INFO ]  HikariPool-1 - Shutdown completed.
+2021-09-27 11:15:47  [ background-preinit:0 ] - [ INFO ]  HV000001: Hibernate Validator 5.4.3.Final
+2021-09-27 11:15:47  [ main:69 ] - [ INFO ]  Starting BaseBootApplication using Java 1.8.0_131 on DESKTOP-C8EM5CU with PID 10440 (C:\Users\18055\Desktop\springboot-study\base-boot\target\classes started by 18055 in C:\Users\18055\Desktop\springboot-study\base-boot)
+2021-09-27 11:15:47  [ main:70 ] - [ INFO ]  No active profile set, falling back to default profiles: default
+2021-09-27 11:15:48  [ main:1142 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-27 11:15:48  [ main:1143 ] - [ INFO ]  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-27 11:15:48  [ main:1234 ] - [ INFO ]  Finished Spring Data repository scanning in 83 ms. Found 2 JPA repository interfaces.
+2021-09-27 11:15:48  [ main:1252 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-27 11:15:48  [ main:1254 ] - [ INFO ]  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-27 11:15:48  [ main:1276 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.JobDAO. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-27 11:15:48  [ main:1277 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.UserDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-27 11:15:48  [ main:1277 ] - [ INFO ]  Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2021-09-27 11:15:49  [ main:1650 ] - [ INFO ]  Bean 'redisConfiguration' of type [com.sq.base.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$83dd21a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-27 11:15:49  [ main:1907 ] - [ INFO ]  Tomcat initialized with port(s): 8081 (http)
+2021-09-27 11:15:50  [ main:3093 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 2967 ms
+2021-09-27 11:15:50  [ main:3288 ] - [ INFO ]  HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-27 11:15:50  [ main:3423 ] - [ INFO ]  HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-27 11:15:50  [ main:3565 ] - [ INFO ]  HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-27 11:15:51  [ main:3663 ] - [ INFO ]  HikariPool-1 - Starting...
+2021-09-27 11:15:51  [ main:4587 ] - [ INFO ]  HikariPool-1 - Start completed.
+2021-09-27 11:15:51  [ main:4598 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-09-27 11:15:52  [ main:5414 ] - [ INFO ]  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-27 11:15:52  [ main:5422 ] - [ INFO ]  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-27 11:15:52  [ main:5470 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-27 11:15:52  [ main:5472 ] - [ INFO ]  Job execution threads will use class loader of thread: main
+2021-09-27 11:15:52  [ main:5483 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-27 11:15:52  [ main:5484 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-27 11:15:52  [ main:5485 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-27 11:15:52  [ main:5485 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-27 11:15:52  [ main:5486 ] - [ INFO ]  Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2021-09-27 11:15:52  [ main:5486 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-27 11:15:53  [ main:5857 ] - [ WARN ]  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-27 11:15:53  [ main:6538 ] - [ INFO ]  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-09-27 11:15:54  [ main:6864 ] - [ INFO ]  Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@28effa3f, org.springframework.security.web.context.SecurityContextPersistenceFilter@4db45d, org.springframework.security.web.header.HeaderWriterFilter@600b3bee, org.springframework.web.filter.CorsFilter@1d1da00b, org.springframework.security.web.authentication.logout.LogoutFilter@3f465ae, com.sq.base.config.security.JwtAuthenticationFilter@2db4a84a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@53086bdc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5c7d675c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3314f179, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5cef5fc9, org.springframework.security.web.session.SessionManagementFilter@20ad64c, org.springframework.security.web.access.ExceptionTranslationFilter@e21d73, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@255482cb]
+2021-09-27 11:15:54  [ main:7102 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-27 11:15:54  [ main:7104 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-27 11:15:54  [ main:7104 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-27 11:15:54  [ main:7104 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-27 11:15:54  [ main:7104 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-27 11:15:54  [ main:7104 ] - [ INFO ]  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-09-27 11:15:54  [ main:7105 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-27 11:15:54  [ main:7105 ] - [ INFO ]  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3bede349
+2021-09-27 11:15:54  [ main:7156 ] - [ INFO ]  Tomcat started on port(s): 8081 (http) with context path ''
+2021-09-27 11:15:54  [ main:7158 ] - [ INFO ]  Context refreshed
+2021-09-27 11:15:54  [ main:7179 ] - [ INFO ]  Found 1 custom documentation plugin(s)
+2021-09-27 11:15:54  [ main:7213 ] - [ INFO ]  Scanning for api listing references
+2021-09-27 11:15:54  [ main:7389 ] - [ INFO ]  Starting Quartz Scheduler now
+2021-09-27 11:15:54  [ main:7389 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-09-27 11:15:54  [ main:7395 ] - [ INFO ]  任务已经启动......
+2021-09-27 11:15:54  [ main:7399 ] - [ INFO ]  Started BaseBootApplication in 8.106 seconds (JVM running for 9.363)
+2021-09-27 11:15:57  [ http-nio-8081-exec-2:9720 ] - [ INFO ]  Initializing Servlet 'dispatcherServlet'
+2021-09-27 11:15:57  [ http-nio-8081-exec-2:9722 ] - [ INFO ]  Completed initialization in 1 ms
+2021-09-27 11:16:16  [ http-nio-8081-exec-3:29549 ] - [ ERROR ]  用户访问资源没有携带正确的token
+2021-09-27 11:17:13  [ SpringApplicationShutdownHook:85962 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 11:17:13  [ SpringApplicationShutdownHook:86145 ] - [ INFO ]  Shutting down Quartz Scheduler
+2021-09-27 11:17:13  [ SpringApplicationShutdownHook:86145 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-27 11:17:13  [ SpringApplicationShutdownHook:86145 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 11:17:13  [ SpringApplicationShutdownHook:86146 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-27 11:17:13  [ SpringApplicationShutdownHook:86164 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-27 11:17:13  [ SpringApplicationShutdownHook:86164 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 11:17:13  [ SpringApplicationShutdownHook:86164 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-27 11:17:13  [ SpringApplicationShutdownHook:86165 ] - [ INFO ]  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-09-27 11:17:13  [ SpringApplicationShutdownHook:86167 ] - [ INFO ]  HikariPool-1 - Shutdown initiated...
+2021-09-27 11:17:13  [ SpringApplicationShutdownHook:86174 ] - [ INFO ]  HikariPool-1 - Shutdown completed.
+2021-09-27 11:17:20  [ background-preinit:0 ] - [ INFO ]  HV000001: Hibernate Validator 5.4.3.Final
+2021-09-27 11:17:20  [ main:57 ] - [ INFO ]  Starting BaseBootApplication using Java 1.8.0_131 on DESKTOP-C8EM5CU with PID 16456 (C:\Users\18055\Desktop\springboot-study\base-boot\target\classes started by 18055 in C:\Users\18055\Desktop\springboot-study\base-boot)
+2021-09-27 11:17:20  [ main:59 ] - [ INFO ]  No active profile set, falling back to default profiles: default
+2021-09-27 11:17:21  [ main:1203 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-27 11:17:21  [ main:1203 ] - [ INFO ]  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-27 11:17:21  [ main:1306 ] - [ INFO ]  Finished Spring Data repository scanning in 95 ms. Found 2 JPA repository interfaces.
+2021-09-27 11:17:21  [ main:1329 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-27 11:17:21  [ main:1331 ] - [ INFO ]  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-27 11:17:21  [ main:1354 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.JobDAO. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-27 11:17:21  [ main:1355 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.UserDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-27 11:17:21  [ main:1355 ] - [ INFO ]  Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2021-09-27 11:17:22  [ main:1717 ] - [ INFO ]  Bean 'redisConfiguration' of type [com.sq.base.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$d20f3cfa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-27 11:17:22  [ main:1984 ] - [ INFO ]  Tomcat initialized with port(s): 8081 (http)
+2021-09-27 11:17:23  [ main:3180 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 3060 ms
+2021-09-27 11:17:23  [ main:3352 ] - [ INFO ]  HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-27 11:17:23  [ main:3464 ] - [ INFO ]  HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-27 11:17:24  [ main:3587 ] - [ INFO ]  HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-27 11:17:24  [ main:3690 ] - [ INFO ]  HikariPool-1 - Starting...
+2021-09-27 11:17:24  [ main:4088 ] - [ INFO ]  HikariPool-1 - Start completed.
+2021-09-27 11:17:24  [ main:4100 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-09-27 11:17:25  [ main:4940 ] - [ INFO ]  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-27 11:17:25  [ main:4950 ] - [ INFO ]  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-27 11:17:25  [ main:4995 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-27 11:17:25  [ main:4996 ] - [ INFO ]  Job execution threads will use class loader of thread: main
+2021-09-27 11:17:25  [ main:5006 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-27 11:17:25  [ main:5006 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-27 11:17:25  [ main:5007 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-27 11:17:25  [ main:5008 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-27 11:17:25  [ main:5008 ] - [ INFO ]  Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2021-09-27 11:17:25  [ main:5008 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-27 11:17:25  [ main:5396 ] - [ WARN ]  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-27 11:17:26  [ main:6091 ] - [ INFO ]  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-09-27 11:17:26  [ main:6432 ] - [ INFO ]  Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d1da00b, org.springframework.security.web.context.SecurityContextPersistenceFilter@6a8ab98f, org.springframework.security.web.header.HeaderWriterFilter@65fe1f47, org.springframework.web.filter.CorsFilter@2db4a84a, org.springframework.security.web.authentication.logout.LogoutFilter@bb1b872, com.sq.base.config.security.JwtAuthenticationFilter@5cef5fc9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@254210b1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@429dde4d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2389f546, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b867869, org.springframework.security.web.session.SessionManagementFilter@2165d4ab, org.springframework.security.web.access.ExceptionTranslationFilter@7a023e34, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@40ecead5]
+2021-09-27 11:17:27  [ main:6708 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-27 11:17:27  [ main:6709 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-27 11:17:27  [ main:6710 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-27 11:17:27  [ main:6710 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-27 11:17:27  [ main:6710 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-27 11:17:27  [ main:6711 ] - [ INFO ]  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-09-27 11:17:27  [ main:6711 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-27 11:17:27  [ main:6711 ] - [ INFO ]  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@501956f9
+2021-09-27 11:17:27  [ main:6769 ] - [ INFO ]  Tomcat started on port(s): 8081 (http) with context path ''
+2021-09-27 11:17:27  [ main:6770 ] - [ INFO ]  Context refreshed
+2021-09-27 11:17:27  [ main:6791 ] - [ INFO ]  Found 1 custom documentation plugin(s)
+2021-09-27 11:17:27  [ main:6822 ] - [ INFO ]  Scanning for api listing references
+2021-09-27 11:17:27  [ main:6991 ] - [ INFO ]  Starting Quartz Scheduler now
+2021-09-27 11:17:27  [ main:6991 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-09-27 11:17:27  [ main:6999 ] - [ INFO ]  任务已经启动......
+2021-09-27 11:17:27  [ main:7004 ] - [ INFO ]  Started BaseBootApplication in 7.668 seconds (JVM running for 9.029)
+2021-09-27 11:17:32  [ http-nio-8081-exec-2:12065 ] - [ INFO ]  Initializing Servlet 'dispatcherServlet'
+2021-09-27 11:17:32  [ http-nio-8081-exec-2:12067 ] - [ INFO ]  Completed initialization in 1 ms
+2021-09-27 11:17:33  [ http-nio-8081-exec-2:12704 ] - [ ERROR ]  用户访问资源没有携带正确的token
+2021-09-27 11:18:19  [ SpringApplicationShutdownHook:59068 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 11:18:19  [ SpringApplicationShutdownHook:59275 ] - [ INFO ]  Shutting down Quartz Scheduler
+2021-09-27 11:18:19  [ SpringApplicationShutdownHook:59275 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-27 11:18:19  [ SpringApplicationShutdownHook:59275 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 11:18:19  [ SpringApplicationShutdownHook:59276 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-27 11:18:19  [ SpringApplicationShutdownHook:59301 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-27 11:18:19  [ SpringApplicationShutdownHook:59301 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 11:18:19  [ SpringApplicationShutdownHook:59302 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-27 11:18:19  [ SpringApplicationShutdownHook:59302 ] - [ INFO ]  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-09-27 11:18:19  [ SpringApplicationShutdownHook:59305 ] - [ INFO ]  HikariPool-1 - Shutdown initiated...
+2021-09-27 11:18:19  [ SpringApplicationShutdownHook:59314 ] - [ INFO ]  HikariPool-1 - Shutdown completed.
+2021-09-27 11:18:26  [ background-preinit:0 ] - [ INFO ]  HV000001: Hibernate Validator 5.4.3.Final
+2021-09-27 11:18:26  [ main:57 ] - [ INFO ]  Starting BaseBootApplication using Java 1.8.0_131 on DESKTOP-C8EM5CU with PID 15516 (C:\Users\18055\Desktop\springboot-study\base-boot\target\classes started by 18055 in C:\Users\18055\Desktop\springboot-study\base-boot)
+2021-09-27 11:18:26  [ main:58 ] - [ INFO ]  No active profile set, falling back to default profiles: default
+2021-09-27 11:18:27  [ main:1200 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-27 11:18:27  [ main:1201 ] - [ INFO ]  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-27 11:18:27  [ main:1288 ] - [ INFO ]  Finished Spring Data repository scanning in 79 ms. Found 2 JPA repository interfaces.
+2021-09-27 11:18:27  [ main:1306 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-27 11:18:27  [ main:1307 ] - [ INFO ]  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-27 11:18:27  [ main:1330 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.JobDAO. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-27 11:18:27  [ main:1330 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.UserDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-27 11:18:27  [ main:1331 ] - [ INFO ]  Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2021-09-27 11:18:28  [ main:1683 ] - [ INFO ]  Bean 'redisConfiguration' of type [com.sq.base.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$d72cb011] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-27 11:18:28  [ main:1927 ] - [ INFO ]  Tomcat initialized with port(s): 8081 (http)
+2021-09-27 11:18:29  [ main:3102 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 2978 ms
+2021-09-27 11:18:29  [ main:3270 ] - [ INFO ]  HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-27 11:18:29  [ main:3420 ] - [ INFO ]  HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-27 11:18:29  [ main:3549 ] - [ INFO ]  HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-27 11:18:30  [ main:3649 ] - [ INFO ]  HikariPool-1 - Starting...
+2021-09-27 11:18:30  [ main:4070 ] - [ INFO ]  HikariPool-1 - Start completed.
+2021-09-27 11:18:30  [ main:4082 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-09-27 11:18:31  [ main:4907 ] - [ INFO ]  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-27 11:18:31  [ main:4917 ] - [ INFO ]  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-27 11:18:31  [ main:4960 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-27 11:18:31  [ main:4962 ] - [ INFO ]  Job execution threads will use class loader of thread: main
+2021-09-27 11:18:31  [ main:4972 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-27 11:18:31  [ main:4972 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-27 11:18:31  [ main:4973 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-27 11:18:31  [ main:4974 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-27 11:18:31  [ main:4974 ] - [ INFO ]  Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2021-09-27 11:18:31  [ main:4975 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-27 11:18:31  [ main:5338 ] - [ WARN ]  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-27 11:18:32  [ main:6020 ] - [ INFO ]  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-09-27 11:18:32  [ main:6440 ] - [ INFO ]  Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a467ada, org.springframework.security.web.context.SecurityContextPersistenceFilter@4bc39640, org.springframework.security.web.header.HeaderWriterFilter@2446be5f, org.springframework.web.filter.CorsFilter@92775a3, org.springframework.security.web.authentication.logout.LogoutFilter@441762b8, com.sq.base.config.security.JwtAuthenticationFilter@2512155e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@61627c9d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1659d7d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18d09283, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ef59aee, org.springframework.security.web.session.SessionManagementFilter@5b4880b3, org.springframework.security.web.access.ExceptionTranslationFilter@32b8992e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@68e62b3b]
+2021-09-27 11:18:33  [ main:6666 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-27 11:18:33  [ main:6668 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-27 11:18:33  [ main:6668 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-27 11:18:33  [ main:6668 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-27 11:18:33  [ main:6668 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-27 11:18:33  [ main:6668 ] - [ INFO ]  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-09-27 11:18:33  [ main:6668 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-27 11:18:33  [ main:6668 ] - [ INFO ]  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@538d2308
+2021-09-27 11:18:33  [ main:6718 ] - [ INFO ]  Tomcat started on port(s): 8081 (http) with context path ''
+2021-09-27 11:18:33  [ main:6720 ] - [ INFO ]  Context refreshed
+2021-09-27 11:18:33  [ main:6741 ] - [ INFO ]  Found 1 custom documentation plugin(s)
+2021-09-27 11:18:33  [ main:6769 ] - [ INFO ]  Scanning for api listing references
+2021-09-27 11:18:33  [ main:6945 ] - [ INFO ]  Starting Quartz Scheduler now
+2021-09-27 11:18:33  [ main:6945 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-09-27 11:18:33  [ main:6951 ] - [ INFO ]  任务已经启动......
+2021-09-27 11:18:33  [ main:6954 ] - [ INFO ]  Started BaseBootApplication in 7.804 seconds (JVM running for 9.063)
+2021-09-27 11:20:39  [ http-nio-8081-exec-1:133070 ] - [ INFO ]  Initializing Servlet 'dispatcherServlet'
+2021-09-27 11:20:39  [ http-nio-8081-exec-1:133072 ] - [ INFO ]  Completed initialization in 1 ms
+2021-09-27 11:23:04  [ SpringApplicationShutdownHook:278086 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 11:23:04  [ SpringApplicationShutdownHook:278259 ] - [ INFO ]  Shutting down Quartz Scheduler
+2021-09-27 11:23:04  [ SpringApplicationShutdownHook:278259 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-27 11:23:04  [ SpringApplicationShutdownHook:278260 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 11:23:04  [ SpringApplicationShutdownHook:278260 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-27 11:23:04  [ SpringApplicationShutdownHook:278277 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-27 11:23:04  [ SpringApplicationShutdownHook:278278 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+2021-09-27 11:23:04  [ SpringApplicationShutdownHook:278278 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-27 11:23:04  [ SpringApplicationShutdownHook:278278 ] - [ INFO ]  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-09-27 11:23:04  [ SpringApplicationShutdownHook:278280 ] - [ INFO ]  HikariPool-1 - Shutdown initiated...
+2021-09-27 11:23:04  [ SpringApplicationShutdownHook:278288 ] - [ INFO ]  HikariPool-1 - Shutdown completed.

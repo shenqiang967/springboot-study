@@ -1,0 +1,510 @@
+2021-09-26 16:12:30  [ background-preinit:0 ] - [ INFO ]  HV000001: Hibernate Validator 5.4.3.Final
+2021-09-26 16:12:30  [ main:46 ] - [ INFO ]  Starting BaseBootApplication using Java 1.8.0_131 on DESKTOP-C8EM5CU with PID 16000 (C:\Users\18055\Desktop\springboot-study\base-boot\target\classes started by 18055 in C:\Users\18055\Desktop\springboot-study\base-boot)
+2021-09-26 16:12:30  [ main:47 ] - [ INFO ]  No active profile set, falling back to default profiles: default
+2021-09-26 16:12:31  [ main:1190 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-26 16:12:31  [ main:1191 ] - [ INFO ]  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-26 16:12:31  [ main:1299 ] - [ INFO ]  Finished Spring Data repository scanning in 97 ms. Found 2 JPA repository interfaces.
+2021-09-26 16:12:31  [ main:1321 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-26 16:12:31  [ main:1322 ] - [ INFO ]  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-26 16:12:31  [ main:1347 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.JobDAO. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-26 16:12:31  [ main:1348 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.UserDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-26 16:12:31  [ main:1348 ] - [ INFO ]  Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2021-09-26 16:12:32  [ main:1772 ] - [ INFO ]  Bean 'redisConfiguration' of type [com.sq.base.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$25e36a67] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-26 16:12:32  [ main:2251 ] - [ INFO ]  Tomcat initialized with port(s): 8081 (http)
+2021-09-26 16:12:33  [ main:3442 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 3348 ms
+2021-09-26 16:12:34  [ main:3621 ] - [ INFO ]  HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-26 16:12:34  [ main:3769 ] - [ INFO ]  HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-26 16:12:34  [ main:3927 ] - [ INFO ]  HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-26 16:12:34  [ main:4051 ] - [ INFO ]  HikariPool-1 - Starting...
+2021-09-26 16:12:35  [ main:4615 ] - [ INFO ]  HikariPool-1 - Start completed.
+2021-09-26 16:12:35  [ main:4632 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-09-26 16:12:35  [ main:5486 ] - [ INFO ]  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-26 16:12:35  [ main:5496 ] - [ INFO ]  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-26 16:12:36  [ main:5538 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-26 16:12:36  [ main:5540 ] - [ INFO ]  Job execution threads will use class loader of thread: main
+2021-09-26 16:12:36  [ main:5549 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-26 16:12:36  [ main:5549 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-26 16:12:36  [ main:5550 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-26 16:12:36  [ main:5551 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-26 16:12:36  [ main:5551 ] - [ INFO ]  Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2021-09-26 16:12:36  [ main:5551 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-26 16:12:36  [ main:5919 ] - [ WARN ]  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-26 16:12:37  [ main:6630 ] - [ INFO ]  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-09-26 16:12:37  [ main:7071 ] - [ INFO ]  Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2835b3d1, org.springframework.security.web.context.SecurityContextPersistenceFilter@aca2a0b, org.springframework.security.web.header.HeaderWriterFilter@62158618, org.springframework.web.filter.CorsFilter@20e9b10b, org.springframework.security.web.authentication.logout.LogoutFilter@4779df3d, com.sq.base.config.security.JwtAuthenticationFilter@2c485b3a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@72851503, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2cdb53d6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54f62ac6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a00d591, org.springframework.security.web.session.SessionManagementFilter@7945986a, org.springframework.security.web.access.ExceptionTranslationFilter@3006aef5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@28d1b2f]
+2021-09-26 16:12:37  [ main:7353 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-26 16:12:37  [ main:7355 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-26 16:12:37  [ main:7355 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-26 16:12:37  [ main:7355 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-26 16:12:37  [ main:7355 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-26 16:12:37  [ main:7355 ] - [ INFO ]  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-09-26 16:12:37  [ main:7355 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-26 16:12:37  [ main:7356 ] - [ INFO ]  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5b697993
+2021-09-26 16:12:37  [ main:7415 ] - [ INFO ]  Tomcat started on port(s): 8081 (http) with context path ''
+2021-09-26 16:12:37  [ main:7416 ] - [ INFO ]  Context refreshed
+2021-09-26 16:12:37  [ main:7441 ] - [ INFO ]  Found 1 custom documentation plugin(s)
+2021-09-26 16:12:37  [ main:7469 ] - [ INFO ]  Scanning for api listing references
+2021-09-26 16:12:38  [ main:7672 ] - [ INFO ]  Starting Quartz Scheduler now
+2021-09-26 16:12:38  [ main:7673 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-09-26 16:12:38  [ main:7681 ] - [ INFO ]  任务已经启动......
+2021-09-26 16:12:38  [ main:7685 ] - [ INFO ]  Started BaseBootApplication in 8.292 seconds (JVM running for 10.164)
+2021-09-26 16:12:56  [ http-nio-8081-exec-1:25983 ] - [ INFO ]  Initializing Servlet 'dispatcherServlet'
+2021-09-26 16:12:56  [ http-nio-8081-exec-1:25985 ] - [ INFO ]  Completed initialization in 1 ms
+2021-09-26 16:12:57  [ http-nio-8081-exec-3:26637 ] - [ INFO ]  AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=8EFE0A0AF3EA4A221B724BEBE56ADBE9], Granted Authorities=[ROLE_ANONYMOUS]]
+2021-09-26 16:12:57  [ http-nio-8081-exec-3:27380 ] - [ INFO ]  请求ip：0:0:0:0:0:0:0:1
+2021-09-26 16:12:57  [ http-nio-8081-exec-3:27381 ] - [ INFO ]  请求的方法：GET
+2021-09-26 16:43:38  [ SpringApplicationShutdownHook:1868276 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-26 16:43:39  [ SpringApplicationShutdownHook:1868689 ] - [ INFO ]  Shutting down Quartz Scheduler
+2021-09-26 16:43:39  [ SpringApplicationShutdownHook:1868689 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-26 16:43:39  [ SpringApplicationShutdownHook:1868689 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-26 16:43:39  [ SpringApplicationShutdownHook:1868691 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-26 16:43:39  [ SpringApplicationShutdownHook:1868712 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-26 16:43:39  [ SpringApplicationShutdownHook:1868712 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+2021-09-26 16:43:39  [ SpringApplicationShutdownHook:1868712 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-26 16:43:39  [ SpringApplicationShutdownHook:1868713 ] - [ INFO ]  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-09-26 16:43:39  [ SpringApplicationShutdownHook:1868734 ] - [ INFO ]  HikariPool-1 - Shutdown initiated...
+2021-09-26 16:43:39  [ SpringApplicationShutdownHook:1868739 ] - [ INFO ]  HikariPool-1 - Shutdown completed.
+2021-09-26 16:43:47  [ background-preinit:0 ] - [ INFO ]  HV000001: Hibernate Validator 5.4.3.Final
+2021-09-26 16:43:47  [ main:51 ] - [ INFO ]  Starting BaseBootApplication using Java 1.8.0_131 on DESKTOP-C8EM5CU with PID 14272 (C:\Users\18055\Desktop\springboot-study\base-boot\target\classes started by 18055 in C:\Users\18055\Desktop\springboot-study\base-boot)
+2021-09-26 16:43:47  [ main:52 ] - [ INFO ]  No active profile set, falling back to default profiles: default
+2021-09-26 16:43:49  [ main:1236 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-26 16:43:49  [ main:1236 ] - [ INFO ]  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-26 16:43:49  [ main:1346 ] - [ INFO ]  Finished Spring Data repository scanning in 98 ms. Found 2 JPA repository interfaces.
+2021-09-26 16:43:49  [ main:1364 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-26 16:43:49  [ main:1365 ] - [ INFO ]  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-26 16:43:49  [ main:1383 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.JobDAO. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-26 16:43:49  [ main:1384 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.UserDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-26 16:43:49  [ main:1384 ] - [ INFO ]  Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2021-09-26 16:43:49  [ main:1741 ] - [ INFO ]  Bean 'redisConfiguration' of type [com.sq.base.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$f0d0f971] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-26 16:43:49  [ main:2141 ] - [ INFO ]  Tomcat initialized with port(s): 8081 (http)
+2021-09-26 16:43:51  [ main:3338 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 3231 ms
+2021-09-26 16:43:51  [ main:3506 ] - [ INFO ]  HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-26 16:43:51  [ main:3670 ] - [ INFO ]  HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-26 16:43:51  [ main:3853 ] - [ INFO ]  HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-26 16:43:51  [ main:4067 ] - [ INFO ]  HikariPool-1 - Starting...
+2021-09-26 16:43:52  [ main:4613 ] - [ INFO ]  HikariPool-1 - Start completed.
+2021-09-26 16:43:52  [ main:4627 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-09-26 16:43:53  [ main:5523 ] - [ INFO ]  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-26 16:43:53  [ main:5535 ] - [ INFO ]  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-26 16:43:53  [ main:5588 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-26 16:43:53  [ main:5591 ] - [ INFO ]  Job execution threads will use class loader of thread: main
+2021-09-26 16:43:53  [ main:5603 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-26 16:43:53  [ main:5603 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-26 16:43:53  [ main:5604 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-26 16:43:53  [ main:5605 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-26 16:43:53  [ main:5606 ] - [ INFO ]  Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2021-09-26 16:43:53  [ main:5606 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-26 16:43:53  [ main:5994 ] - [ WARN ]  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-26 16:43:54  [ main:6740 ] - [ INFO ]  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-09-26 16:43:54  [ main:7130 ] - [ INFO ]  Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2c485b3a, org.springframework.security.web.context.SecurityContextPersistenceFilter@2cdb53d6, org.springframework.security.web.header.HeaderWriterFilter@7945986a, org.springframework.web.filter.CorsFilter@4a00d591, org.springframework.security.web.authentication.logout.LogoutFilter@3ef7fb04, com.sq.base.config.security.JwtAuthenticationFilter@4fae4c3b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1d722bff, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@397bd46b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5fe4848, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2222cd2c, org.springframework.security.web.session.SessionManagementFilter@aca2a0b, org.springframework.security.web.access.ExceptionTranslationFilter@62158618, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1181526e]
+2021-09-26 16:43:55  [ main:7390 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-26 16:43:55  [ main:7391 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-26 16:43:55  [ main:7391 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-26 16:43:55  [ main:7391 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-26 16:43:55  [ main:7392 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-26 16:43:55  [ main:7392 ] - [ INFO ]  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-09-26 16:43:55  [ main:7392 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-26 16:43:55  [ main:7392 ] - [ INFO ]  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@280f061e
+2021-09-26 16:43:55  [ main:7445 ] - [ INFO ]  Tomcat started on port(s): 8081 (http) with context path ''
+2021-09-26 16:43:55  [ main:7447 ] - [ INFO ]  Context refreshed
+2021-09-26 16:43:55  [ main:7470 ] - [ INFO ]  Found 1 custom documentation plugin(s)
+2021-09-26 16:43:55  [ main:7505 ] - [ INFO ]  Scanning for api listing references
+2021-09-26 16:43:55  [ main:7702 ] - [ INFO ]  Starting Quartz Scheduler now
+2021-09-26 16:43:55  [ main:7702 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-09-26 16:43:55  [ main:7708 ] - [ INFO ]  任务已经启动......
+2021-09-26 16:43:55  [ main:7712 ] - [ INFO ]  Started BaseBootApplication in 8.465 seconds (JVM running for 9.91)
+2021-09-26 16:44:05  [ http-nio-8081-exec-1:17299 ] - [ INFO ]  Initializing Servlet 'dispatcherServlet'
+2021-09-26 16:44:05  [ http-nio-8081-exec-1:17302 ] - [ INFO ]  Completed initialization in 2 ms
+2021-09-26 16:44:05  [ http-nio-8081-exec-1:17804 ] - [ ERROR ]  An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: 用户不存在
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:133)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:85)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:222)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at com.sq.base.config.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:39)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.sq.base.common.exception.CustomException: 用户不存在
+	at com.sq.base.config.security.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:37)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:93)
+	... 60 more
+2021-09-26 16:44:05  [ http-nio-8081-exec-3:17855 ] - [ INFO ]  AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=A5DC45B7F87FD6D7EF403D7DCFE90AFA], Granted Authorities=[ROLE_ANONYMOUS]]
+2021-09-26 16:44:06  [ http-nio-8081-exec-3:18463 ] - [ INFO ]  请求ip：0:0:0:0:0:0:0:1
+2021-09-26 16:44:06  [ http-nio-8081-exec-3:18464 ] - [ INFO ]  请求的方法：GET
+2021-09-26 16:59:13  [ http-nio-8081-exec-6:925490 ] - [ ERROR ]  An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: 用户不存在
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:133)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:85)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:222)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at com.sq.base.config.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:39)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.sq.base.common.exception.CustomException: 用户不存在
+	at com.sq.base.config.security.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:37)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:93)
+	... 60 more
+2021-09-26 16:59:13  [ http-nio-8081-exec-7:925497 ] - [ INFO ]  AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=A5DC45B7F87FD6D7EF403D7DCFE90AFA], Granted Authorities=[ROLE_ANONYMOUS]]
+2021-09-26 16:59:13  [ http-nio-8081-exec-7:925500 ] - [ INFO ]  请求ip：0:0:0:0:0:0:0:1
+2021-09-26 16:59:13  [ http-nio-8081-exec-7:925500 ] - [ INFO ]  请求的方法：GET
+2021-09-26 16:59:21  [ http-nio-8081-exec-8:933658 ] - [ ERROR ]  An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: 用户不存在
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:133)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:85)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:222)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at com.sq.base.config.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:39)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.sq.base.common.exception.CustomException: 用户不存在
+	at com.sq.base.config.security.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:37)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:93)
+	... 60 more
+2021-09-26 16:59:21  [ http-nio-8081-exec-9:933663 ] - [ INFO ]  AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=A5DC45B7F87FD6D7EF403D7DCFE90AFA], Granted Authorities=[ROLE_ANONYMOUS]]
+2021-09-26 16:59:21  [ http-nio-8081-exec-9:933664 ] - [ INFO ]  请求ip：0:0:0:0:0:0:0:1
+2021-09-26 16:59:21  [ http-nio-8081-exec-9:933664 ] - [ INFO ]  请求的方法：GET
+2021-09-26 17:01:33  [ HikariPool-1 housekeeper:1065879 ] - [ WARN ]  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m11s122ms979µs).
+2021-09-26 17:01:33  [ http-nio-8081-exec-10:1066055 ] - [ ERROR ]  An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: 用户不存在
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:133)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:201)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:85)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:222)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at com.sq.base.config.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:39)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.sq.base.common.exception.CustomException: 用户不存在
+	at com.sq.base.config.security.UserDetailsServiceImpl.loadUserByUsername(UserDetailsServiceImpl.java:37)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:93)
+	... 60 more
+2021-09-26 17:01:44  [ http-nio-8081-exec-2:1076278 ] - [ INFO ]  AnonymousAuthenticationToken [Principal=anonymousUser, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=A5DC45B7F87FD6D7EF403D7DCFE90AFA], Granted Authorities=[ROLE_ANONYMOUS]]
+2021-09-26 17:01:44  [ http-nio-8081-exec-2:1076280 ] - [ INFO ]  请求ip：0:0:0:0:0:0:0:1
+2021-09-26 17:01:44  [ http-nio-8081-exec-2:1076281 ] - [ INFO ]  请求的方法：GET
+2021-09-26 17:07:42  [ SpringApplicationShutdownHook:1434595 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-26 17:07:42  [ SpringApplicationShutdownHook:1434760 ] - [ INFO ]  Shutting down Quartz Scheduler
+2021-09-26 17:07:42  [ SpringApplicationShutdownHook:1434761 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-26 17:07:42  [ SpringApplicationShutdownHook:1434761 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-26 17:07:42  [ SpringApplicationShutdownHook:1434761 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-26 17:07:42  [ SpringApplicationShutdownHook:1435113 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-26 17:07:42  [ SpringApplicationShutdownHook:1435114 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+2021-09-26 17:07:42  [ SpringApplicationShutdownHook:1435114 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-26 17:07:42  [ SpringApplicationShutdownHook:1435114 ] - [ INFO ]  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-09-26 17:07:42  [ SpringApplicationShutdownHook:1435118 ] - [ INFO ]  HikariPool-1 - Shutdown initiated...
+2021-09-26 17:07:42  [ SpringApplicationShutdownHook:1435126 ] - [ INFO ]  HikariPool-1 - Shutdown completed.
+2021-09-26 17:07:49  [ background-preinit:0 ] - [ INFO ]  HV000001: Hibernate Validator 5.4.3.Final
+2021-09-26 17:07:49  [ main:61 ] - [ INFO ]  Starting BaseBootApplication using Java 1.8.0_131 on DESKTOP-C8EM5CU with PID 7632 (C:\Users\18055\Desktop\springboot-study\base-boot\target\classes started by 18055 in C:\Users\18055\Desktop\springboot-study\base-boot)
+2021-09-26 17:07:49  [ main:63 ] - [ INFO ]  No active profile set, falling back to default profiles: default
+2021-09-26 17:07:50  [ main:1261 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-26 17:07:50  [ main:1261 ] - [ INFO ]  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-26 17:07:50  [ main:1359 ] - [ INFO ]  Finished Spring Data repository scanning in 88 ms. Found 2 JPA repository interfaces.
+2021-09-26 17:07:50  [ main:1379 ] - [ INFO ]  Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-09-26 17:07:50  [ main:1381 ] - [ INFO ]  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-09-26 17:07:50  [ main:1401 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.JobDAO. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-26 17:07:50  [ main:1401 ] - [ INFO ]  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sq.base.dao.UserDao. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2021-09-26 17:07:50  [ main:1402 ] - [ INFO ]  Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2021-09-26 17:07:51  [ main:1746 ] - [ INFO ]  Bean 'redisConfiguration' of type [com.sq.base.config.redis.RedisConfiguration$$EnhancerBySpringCGLIB$$fd8ea35] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-09-26 17:07:51  [ main:2009 ] - [ INFO ]  Tomcat initialized with port(s): 8081 (http)
+2021-09-26 17:07:52  [ main:3191 ] - [ INFO ]  Root WebApplicationContext: initialization completed in 3058 ms
+2021-09-26 17:07:52  [ main:3361 ] - [ INFO ]  HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-26 17:07:52  [ main:3476 ] - [ INFO ]  HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-26 17:07:52  [ main:3595 ] - [ INFO ]  HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-26 17:07:53  [ main:3726 ] - [ INFO ]  HikariPool-1 - Starting...
+2021-09-26 17:07:53  [ main:4143 ] - [ INFO ]  HikariPool-1 - Start completed.
+2021-09-26 17:07:53  [ main:4153 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-09-26 17:07:54  [ main:4910 ] - [ INFO ]  HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-26 17:07:54  [ main:4920 ] - [ INFO ]  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-26 17:07:54  [ main:4966 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-26 17:07:54  [ main:4968 ] - [ INFO ]  Job execution threads will use class loader of thread: main
+2021-09-26 17:07:54  [ main:4980 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-26 17:07:54  [ main:4980 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-26 17:07:54  [ main:4981 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-26 17:07:54  [ main:4982 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-26 17:07:54  [ main:4983 ] - [ INFO ]  Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2021-09-26 17:07:54  [ main:4983 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-26 17:07:54  [ main:5349 ] - [ WARN ]  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-26 17:07:55  [ main:6070 ] - [ INFO ]  Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-09-26 17:07:55  [ main:6398 ] - [ INFO ]  Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74159dc9, org.springframework.security.web.context.SecurityContextPersistenceFilter@ad6448e, org.springframework.security.web.header.HeaderWriterFilter@89178b4, org.springframework.web.filter.CorsFilter@53086bdc, org.springframework.security.web.authentication.logout.LogoutFilter@41935a9d, com.sq.base.config.security.JwtAuthenticationFilter@254210b1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@255482cb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42684d86, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f346355, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@600a1270, org.springframework.security.web.session.SessionManagementFilter@64836643, org.springframework.security.web.access.ExceptionTranslationFilter@39a03ccc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@77e1b84c]
+2021-09-26 17:07:56  [ main:6651 ] - [ INFO ]  Using default implementation for ThreadExecutor
+2021-09-26 17:07:56  [ main:6652 ] - [ INFO ]  Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-09-26 17:07:56  [ main:6653 ] - [ INFO ]  Quartz Scheduler v.2.3.2 created.
+2021-09-26 17:07:56  [ main:6653 ] - [ INFO ]  RAMJobStore initialized.
+2021-09-26 17:07:56  [ main:6653 ] - [ INFO ]  Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-09-26 17:07:56  [ main:6653 ] - [ INFO ]  Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-09-26 17:07:56  [ main:6653 ] - [ INFO ]  Quartz scheduler version: 2.3.2
+2021-09-26 17:07:56  [ main:6653 ] - [ INFO ]  JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@625c9248
+2021-09-26 17:07:56  [ main:6703 ] - [ INFO ]  Tomcat started on port(s): 8081 (http) with context path ''
+2021-09-26 17:07:56  [ main:6704 ] - [ INFO ]  Context refreshed
+2021-09-26 17:07:56  [ main:6723 ] - [ INFO ]  Found 1 custom documentation plugin(s)
+2021-09-26 17:07:56  [ main:6750 ] - [ INFO ]  Scanning for api listing references
+2021-09-26 17:07:56  [ main:6970 ] - [ INFO ]  Starting Quartz Scheduler now
+2021-09-26 17:07:56  [ main:6970 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-09-26 17:07:56  [ main:6976 ] - [ INFO ]  任务已经启动......
+2021-09-26 17:07:56  [ main:6980 ] - [ INFO ]  Started BaseBootApplication in 7.682 seconds (JVM running for 8.923)
+2021-09-26 17:37:57  [ SpringApplicationShutdownHook:1808372 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-26 17:37:57  [ SpringApplicationShutdownHook:1808569 ] - [ INFO ]  Shutting down Quartz Scheduler
+2021-09-26 17:37:57  [ SpringApplicationShutdownHook:1808570 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-26 17:37:57  [ SpringApplicationShutdownHook:1808570 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-09-26 17:37:57  [ SpringApplicationShutdownHook:1808571 ] - [ INFO ]  Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-26 17:37:57  [ SpringApplicationShutdownHook:1808591 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+2021-09-26 17:37:57  [ SpringApplicationShutdownHook:1808592 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+2021-09-26 17:37:57  [ SpringApplicationShutdownHook:1808592 ] - [ INFO ]  Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-09-26 17:37:57  [ SpringApplicationShutdownHook:1808592 ] - [ INFO ]  Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-09-26 17:37:57  [ SpringApplicationShutdownHook:1808596 ] - [ INFO ]  HikariPool-1 - Shutdown initiated...
+2021-09-26 17:37:57  [ SpringApplicationShutdownHook:1808599 ] - [ INFO ]  HikariPool-1 - Shutdown completed.

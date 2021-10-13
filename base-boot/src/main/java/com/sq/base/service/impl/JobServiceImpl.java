@@ -1,7 +1,8 @@
-package com.sq.base.service;
+package com.sq.base.service.impl;
 
 import com.sq.base.dao.JobDAO;
 import com.sq.base.domain.task.ScheduleJob;
+import com.sq.base.service.IJobService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +18,7 @@ import java.util.List;
  */
 @Service("jobService")
 @Slf4j
-public class JobServiceImpl implements IJobService{
+public class JobServiceImpl implements IJobService {
     @Autowired
     JobDAO userDAO;
 

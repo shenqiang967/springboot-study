@@ -1,5 +1,6 @@
 package com.sq.base.config.web;
 
+import com.sq.base.config.web.interceptor.AutoIdempotentInterceptor;
 import com.sq.base.config.web.interceptor.RequestHeaderInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -19,10 +20,13 @@ public class WebMvcConfiguration extends WebMvcConfigurerAdapter {
 
     @Autowired
     RequestHeaderInterceptor requestHeaderInterceptor;
+    @Autowired
+    AutoIdempotentInterceptor autoIdempotentInterceptor;
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         //这里的拦截器prehandle的执行顺序按照加入时的顺序，postHandle是加入时的倒叙
         registry.addInterceptor(requestHeaderInterceptor);
+        registry.addInterceptor(autoIdempotentInterceptor);
         super.addInterceptors(registry);
     }
 

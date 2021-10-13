@@ -1,8 +1,8 @@
 package com.sq.base.mapstruct;
 
 import com.sq.base.domain.role.BaseRole;
-import com.sq.base.domain.user.BaseUser;
-import com.sq.base.domain.user.dto.ApiUserDTO;
+import com.sq.base.domain.baseuser.BaseUser;
+import com.sq.base.domain.baseuser.dto.ApiUserDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;

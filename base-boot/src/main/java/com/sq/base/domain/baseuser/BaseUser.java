@@ -1,4 +1,4 @@
-package com.sq.base.domain.user;
+package com.sq.base.domain.baseuser;
 
 import com.sq.base.domain.role.BaseRole;
 import lombok.AllArgsConstructor;

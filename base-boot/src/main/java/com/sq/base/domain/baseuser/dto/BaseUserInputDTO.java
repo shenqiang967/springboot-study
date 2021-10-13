@@ -1,6 +1,6 @@
-package com.sq.base.domain.user.dto;
+package com.sq.base.domain.baseuser.dto;
 
-import com.sq.base.domain.user.BaseUser;
+import com.sq.base.domain.baseuser.BaseUser;
 import com.sq.base.util.convert.Converter;
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,5 +1,7 @@
 package com.sq.base.util.result;
 
+import com.sq.base.common.constants.HttpStatus;
+
 /**
  * @Description: // 类说明，在创建类时要填写
  * @ClassName: BaseResult    // 类名，会自动填充
@@ -37,6 +39,10 @@ public class BaseResult {
     }
     public static BaseResult fail(String msg,Integer code){
         return new BaseResult(msg,code,null);
+    }
+
+    public static BaseResult fail(HttpStatus status) {
+        return new BaseResult(status.getMsg(),status.getCode(),null);
     }
 
     public String getMsg() {

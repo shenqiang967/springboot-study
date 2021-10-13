@@ -1,10 +1,10 @@
 package com.sq.base.domian;
 
 import com.sq.base.domain.role.BaseRole;
-import com.sq.base.domain.user.BaseUser;
-import com.sq.base.domain.user.dto.ApiUserDTO;
-import com.sq.base.domain.user.dto.BaseUserInputDTO;
-import com.sq.base.domain.user.dto.BaseUserOutputDTo;
+import com.sq.base.domain.baseuser.BaseUser;
+import com.sq.base.domain.baseuser.dto.ApiUserDTO;
+import com.sq.base.domain.baseuser.dto.BaseUserInputDTO;
+import com.sq.base.domain.baseuser.dto.BaseUserOutputDTo;
 import com.sq.base.mapstruct.ApiUserDTOMapper;
 
 /**

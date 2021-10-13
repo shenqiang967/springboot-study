@@ -229,4 +229,13 @@ public class RedisService {
         return redisTemplate.keys(pattern);
     }
 
+    /**
+     * 判断缓存中是否有对应的value
+     * @param key
+     * @return
+     */
+    public boolean exists(final String key) {
+        return redisTemplate.hasKey(key);
+    }
+
 }

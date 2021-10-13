@@ -31,6 +31,14 @@ public class GlobalExceptionHandler {
         response.setContentType("application/json;charset=UTF-8");
         return BaseResult.fail(e.getMessage(),500);
     }
+    @ExceptionHandler(value = {Exception.class})
+    @ResponseStatus(value = HttpStatus.OK)
+    @ResponseBody
+    public BaseResult exceptionHandler(HttpServletResponse response, CustomException e) throws JsonProcessingException {
+        log.error(e.getMessage(), e);
+        response.setContentType("application/json;charset=UTF-8");
+        return BaseResult.fail(e.getMessage(),500);
+    }
 
 
 }

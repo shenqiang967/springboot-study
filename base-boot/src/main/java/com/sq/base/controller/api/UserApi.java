@@ -1,10 +1,9 @@
 package com.sq.base.controller.api;
 
 import com.sq.base.common.exception.CustomException;
-import com.sq.base.domain.user.dto.BaseUserInputDTO;
+import com.sq.base.domain.baseuser.dto.BaseUserInputDTO;
 import com.sq.base.mapstruct.ApiUserDTOMapper;
 import com.sq.base.util.result.BaseResult;
-import org.springframework.http.MediaType;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

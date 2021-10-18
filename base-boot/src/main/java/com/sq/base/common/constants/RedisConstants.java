@@ -9,6 +9,6 @@ package com.sq.base.common.constants;
  */
 public final class RedisConstants {
     //redis 校验重复提交的token前缀
-    public static final String REPEAT_TOKEN_PREFIX = "rpeat_" ;
+    public static final String REPEAT_TOKEN_PREFIX = "rpeat:" ;
     public static final String TOKEN_NAME = "REPEAT_TOKEN";
 }

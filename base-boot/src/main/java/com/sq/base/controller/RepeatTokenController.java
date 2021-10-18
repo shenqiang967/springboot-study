@@ -1,9 +1,13 @@
 package com.sq.base.controller;
 
+import com.sq.base.aspect.AutoIdempotent;
 import com.sq.base.aspect.service.impl.RepeatTokenService;
+import com.sq.base.domain.baseuser.BaseUser;
 import com.sq.base.util.result.BaseResult;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,11 +20,18 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("repeat")
+@Slf4j
 public class RepeatTokenController {
     @Autowired
     private RepeatTokenService repeatTokenService;
     @GetMapping("dispatch")
     public BaseResult dispatch(){
         return BaseResult.success(repeatTokenService.createToken());
+    }
+    //测试重复提交
+    @PutMapping("test")
+    @AutoIdempotent
+    public void test(BaseUser baseUser){
+        log.info(baseUser.toString());
     }
 }

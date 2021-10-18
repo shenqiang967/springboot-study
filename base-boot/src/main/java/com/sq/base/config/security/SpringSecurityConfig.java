@@ -2,16 +2,15 @@ package com.sq.base.config.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
@@ -32,9 +31,27 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     AuthenticationSuccessHandler jwtAuthenticationSuccessHandler;
 
+
+    /**
+     * Todo configure(AuthenticationManagerBuilder)用于通过允许AuthenticationProvider容易地添加来建立认证机制。
+     *      也就是说用来记录账号，密码，角色信息。下方代码不从数据库读取，直接手动赋予
+     * @author sq
+     * @param auth
+     * @return void
+     * @date 2021/10/14 14:10
+     */
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsService);
+        // auth
+        //         .inMemoryAuthentication()
+        //         .withUser("user")
+        //         .password("password")
+        //         .roles("USER")
+        //         .and()
+        //         .withUser("admin")
+        //         .password("password")
+        //         .roles("ADMIN","USER");
+        auth.userDetailsService(userDetailsService).passwordEncoder(new BCryptPasswordEncoder());
     }
 
     /**
@@ -51,7 +68,15 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
 
-
+    /**
+     * Todo configure(HttpSecurity)允许基于选择匹配在资源级配置基于网络的安全性。以下示例将以/ admin /开头的网址限制为具有ADMIN角色的用户，并声明任何其他网址需要成功验证。
+     *  也就是对角色的权限——所能访问的路径做出限制
+     * @desc
+     * @author sq
+     * @param http
+     * @return void
+     * @date 2021/10/14 14:09
+     */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and()
@@ -79,9 +104,21 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .accessDeniedHandler(jwtAccessDeniedHandler)
         ;
     }
-    @Bean
-    public PasswordEncoder getEncoder(){
-        return new BCryptPasswordEncoder();
+    /**
+     * Todo configure(WebSecurity)用于影响全局安全性(配置资源，设置调试模式，通过实现自定义防火墙定义拒绝请求)的配置设置。
+     * @desc 一般用于配置全局的某些通用事物，例如静态资源等
+     * @author sq
+     * @param web web控制器
+     * @return void
+     * @date 2021/10/14 11:30
+     */
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers("/repeat/*");
     }
+    // @Bean
+    // public PasswordEncoder getEncoder(){
+    //     return new BCryptPasswordEncoder();
+    // }
 
 }

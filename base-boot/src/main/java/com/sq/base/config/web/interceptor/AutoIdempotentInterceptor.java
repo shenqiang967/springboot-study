@@ -63,9 +63,12 @@ public class AutoIdempotentInterceptor implements HandlerInterceptor {
             try{
                 return repeatTokenService.checkToken(request);// 幂等性校验, 校验通过则放行, 校验失败则抛出异常, 并通过统一异常处理返回友好提示
             }catch(CustomException e){
+                response.setContentType("application/json;charset=utf-8");
                 response.getWriter().print(JSON.toJSONString(BaseResult.fail(HttpStatus.ILLEGAL_REPEAT_TOKEN)));
+                return false;
             }catch (Exception ex){
                 log.error(ex.getMessage(),ex);
+                return false;
             }
         }
         //必须返回true,否则会被拦截一切请求

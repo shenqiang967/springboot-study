@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @Description: // 类说明，在创建类时要填写
@@ -35,7 +36,7 @@ public class RepeatTokenService implements IRepeatTokenService {
         StringBuilder token = new StringBuilder();
         try{
             token.append(RedisConstants.REPEAT_TOKEN_PREFIX).append(str);
-            redisService.expire(token.toString(),10000L);
+            redisService.setCacheObject(token.toString(),token.toString(),2*60*1000,TimeUnit.SECONDS);
             boolean notEmpty = StringUtils.isNotEmpty(token.toString());
             if(notEmpty) {
                 return token.toString();

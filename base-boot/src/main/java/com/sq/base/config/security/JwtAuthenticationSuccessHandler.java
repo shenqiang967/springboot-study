@@ -8,7 +8,6 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 
-import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -39,6 +38,7 @@ public class JwtAuthenticationSuccessHandler implements AuthenticationSuccessHan
 
         HashMap<String, Object> extraMap = new HashMap<>();
         extraMap.put("permission",user.getAuthorities());
-        response.getWriter().print(JSON.toJSONString(BaseResult.success(JwtTokenUtils.createToken(BaseTokenInfo.builder().expiration(60000L).extraMap(extraMap).userName(user.getUsername()).build()))));
+        response.setContentType("application/json;charset=utf-8");
+        response.getWriter().print(JSON.toJSONString(BaseResult.success(JwtTokenUtils.createToken(BaseTokenInfo.builder().expiration(60*60*1000L).extraMap(extraMap).userName(user.getUsername()).build()))));
     }
 }
